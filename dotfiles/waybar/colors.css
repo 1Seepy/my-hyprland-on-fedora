@@ -1,0 +1,19 @@
+/*
+* Custom palette
+* Maintainer: atticusblue
+*/
+
+@define-color base     #24273a;
+@define-color mantle   #1e2030;
+@define-color crust    #181926;
+
+@define-color mountain #1a2c74;
+@define-color sun      #eefbf1;
+@define-color water    #266ab5;
+@define-color hyprland #33ccff;
+@define-color sky      #2f9efa;
+@define-color sapphire #072c61;
+@define-color green    #a6da95;
+@define-color yellow   #eed49f;
+@define-color red      #ed8796;
+@define-color black    #000000;
