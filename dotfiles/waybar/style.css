@@ -7,10 +7,8 @@
 }
 
 #waybar {
-  background: rgba(0, 0, 0, 0.75);
-  border-color: @water;
-  border-style: solid;
-  border-width: 2px;
+  background: transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
   color: @water;
   margin: 5px 5px;
@@ -38,7 +36,7 @@
 #workspaces button:hover {
   color: @sky;
   background-color: transparent;
-  border-radius: 1rem;
+  border-radius: 15px;
 }
 
 #custom-music,
@@ -51,15 +49,19 @@
 #custom-power,
 #custom-updates,
 #custom-fedora {
-  color: @water;
-  background-color: transparent;
+  color: @black;
+  background-color: @water;
+  border-radius: 15px;
   padding: 0.5rem 1rem;
-  margin: 5px 0;
+  margin: 5px 5px;
 }
 
-#clock {
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+#custom-fedora {
+  margin-left: 20px;
+}
+
+#custom-power {
+  margin-right: 20px;
 }
 
 #battery {
@@ -78,29 +80,8 @@
   color: @yellow;
 }
 
-#backlight, #battery {
-    border-radius: 0;
-}
-
 #pulseaudio {
-  border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
-}
-
-#custom-music {
-  border-radius: 1rem;
-}
-
-#custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-}
-
-#custom-power,
-#custom-fedora {
-    color: @black;
-    background-color: @water;
-    margin: 0px;
-    border-radius: 10px;
 }
 
 #tray {
@@ -109,6 +90,7 @@
 }
 
 /* Weather */
+
 #custom-weather.severe {
     color: #eb937d;
 }
