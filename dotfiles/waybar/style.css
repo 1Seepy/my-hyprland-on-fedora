@@ -15,7 +15,7 @@
 }
 
 #workspaces {
-  border-radius: 1rem;
+  border-radius: 15px;
   margin: 5px;
   background-color: transparent;
   margin-left: 1rem;
@@ -23,14 +23,14 @@
 
 #workspaces button {
   color: @mountain;
-  border-radius: 1rem;
+  border-radius: 15px;
   padding: 0.4rem;
 }
 
 #workspaces button.active {
   color: @water;
   background-color: transparent;
-  border-radius: 1rem;
+  border-radius: 15px;
 }
 
 #workspaces button:hover {
@@ -48,7 +48,9 @@
 #custom-lock,
 #custom-power,
 #custom-updates,
-#custom-fedora {
+#custom-fedora,
+#custom-weather,
+#custom-apps {
   color: @black;
   background-color: @water;
   border-radius: 15px;
@@ -86,11 +88,10 @@
 
 #tray {
   margin-right: 1rem;
-  border-radius: 1rem;
+  border-radius: 15px;
 }
 
 /* Weather */
-
 #custom-weather.severe {
     color: #eb937d;
 }
