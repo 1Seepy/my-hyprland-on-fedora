@@ -52,6 +52,7 @@ echo "If you don't get prompted to overwrite any configurations, you can ignore 
 mv -i -f * ~/.config
 echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers
+mkdir ~/.local/share/fonts
 cd ~/Downloads/myfedorahyprland/extras
 mv *.png ~/Pictures/Hyprpapers
 mv *.ttf ~/.local/share/fonts
