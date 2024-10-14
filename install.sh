@@ -4,7 +4,7 @@ read -p "Proceed (y/n)? " choice
 case "$choice" in 
   y|Y ) echo "Continuing.";;
   n|N ) exit;;
-  * ) exit;;
+  * ) echo "I'll assume that means no, for safety." & exit;;
 esac
 echo "Updating..."
 sudo dnf update
@@ -44,15 +44,19 @@ cd ~/Downloads/myfedorahyprland/dotfiles
 echo "If you have any configurations already setup, the terminal will now prompt you if you would like to replace them with these dotfiles. I would recommend replacing any defaults, but keeping any you made yourself."
 echo "If you don't get prompted to overwrite any configurations, you can ignore this message."
 mv -i -f * ~/.config
+echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers
+cd ~/Downloads/myfedorahyprland/extras
+mv *.png ~/Pictures/Hyprpapers
+mv *.ttf ~/.local/share/fonts
 echo "Cleaning up..."
 cd ~/Downloads
 rm -rf myfedorahyprland
 echo "Done!"
-read -p "To enter Hyprland you have to logout. Logout now? " choice
+read -p "To enter Hyprland you must reboot. Reboot now? " choice
 case "$choice" in 
-  y|Y ) sudo logout;;
-  n|N ) exit;;
-  * ) echo "Invalid.";;
+  y|Y ) systemctl reboot;;
+  n|N ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
+  * ) echo "I'll assume that means no, for safety." & echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
 esac
 exit
