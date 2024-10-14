@@ -12,6 +12,9 @@ echo "Updated."
 echo "Installing Hyprland..."
 sudo dnf install hyprland
 sudo dnf install hyprland-devel
+sudo dnf install hyprpaper
+sudo dnf install hyprpicker
+sudo dnf install hyprlock
 echo "Installed Hyprland."
 echo "Installing kitty..."
 sudo dnf install kitty
