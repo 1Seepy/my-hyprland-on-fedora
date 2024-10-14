@@ -32,6 +32,11 @@ echo "Installing clipse..."
 sudo dnf install wl-clipboard
 sudo dnf copr enable azandure/clipse & echo "Enabling COPR repository..."
 sudo dnf install clipse
+echo "Installed clipse."
+echo "Installing pyquery..."
+sudo dnf install python3-pip
+pip install pyquery
+echo "Installed pyquery."
 echo "Cloning dotfiles..."
 mkdir ~/Downloads/myfedorahyprland
 git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedorahyprland
