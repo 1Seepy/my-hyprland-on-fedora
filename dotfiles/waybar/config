@@ -95,7 +95,7 @@
     "custom/apps": {
     	"format": "Apps",
     	"tooltip": "false",
-    	"on-click": "rofi -show drun"
+    	"on-click": "rofi -show drun",
     	"on-click-right": "~/.config/waybar/scripts/keybinds.sh"
     }
 }
