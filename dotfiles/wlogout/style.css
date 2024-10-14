@@ -35,38 +35,36 @@ Buttons
 ----------------------------------------------------- 
 */
 
+#lock,
+#reboot,
+#logout,
+#shutdown,
+#suspend,
+#hibernate {
+  margin: 10px;
+  border-radius: 15px;
+}
+
 #lock {
-	margin: 10px;
-	border-radius: 20px;
 	background-image: image(url("icons/lock.png"));
 }
 
 #reboot {
-	margin: 10px;
-	border-radius: 20px;
 	background-image: image(url("icons/reboot.png"));
 }
 
 #logout {
-	margin: 10px;
-	border-radius: 20px;
 	background-image: image(url("icons/logout.png"));
 }
 
 #shutdown {
-	margin: 10px;
-	border-radius: 20px;
 	background-image: image(url("icons/shutdown.png"));
 }
 
 #suspend {
-  margin: 10px;
-	border-radius: 20px;
 	background-image: image(url("icons/suspend.png"));
 }
 
 #hibernate {
-  margin: 10px;
-	border-radius: 20px;
 	background-image: image(url("icons/hibernate.png"));
 }
