@@ -1,7 +1,8 @@
 #!/bin/bash
+killall dunst & killall waybar
+dunst & waybar
 killall hyprpaper
 hyprpaper
-killall dunst
-dunst
-killall waybar
-waybar
+hyprpaper
+hyprpaper
+hyprpaper
