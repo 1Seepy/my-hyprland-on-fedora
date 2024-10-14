@@ -4,7 +4,7 @@ read -p "Proceed (y/n)? " choice
 case "$choice" in 
   y|Y ) echo "Continuing.";;
   n|N ) exit;;
-  * ) echo "Invalid.";;
+  * ) exit;;
 esac
 echo "Updating..."
 sudo dnf update
@@ -38,7 +38,7 @@ git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedo
 cd ~/Downloads/myfedorahyprland/dotfiles
 echo "If you have any configurations already setup, the terminal will now prompt you if you would like to replace them with these dotfiles. I would recommend replacing any defaults, but keeping any you made yourself."
 echo "If you don't get prompted to overwrite any configurations, you can ignore this message."
-mv -i * ~/.config
+mv -i -f * ~/.config
 mkdir ~/Pictures/Hyprpapers
 echo "Cleaning up..."
 cd ~/Downloads
