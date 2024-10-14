@@ -1,9 +1,8 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "width": 1880, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["custom/fedora", "custom/updates", "tray"],
+    "modules-left": ["custom/fedora", "custom/updates", "tray", "custom/apps"],
     "modules-center": ["hyprland/workspaces", "custom/music"],
     "modules-right": ["custom/weather", "pulseaudio", "backlight", "battery", "clock", "custom/power"],
     "hyprland/workspaces": {
@@ -92,5 +91,11 @@
 	"return-type": "json",
 	"on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
 	// "format-alt": "{alt}",
+    },
+    "custom/apps": {
+    	"format": "Apps",
+    	"tooltip": "false",
+    	"on-click": "rofi -show drun"
+    	"on-click-right": "~/.config/waybar/scripts/keybinds.sh"
     }
 }
