@@ -20,7 +20,7 @@ weather_icons = {
 
 # to get your own location_id, go to https://weather.com & search your location.
 # once you choose your location, you can see the location_id in the URL
-location_id = "13066"  # TODO
+location_id = ""  # TODO
 
 # get html page
 url = "https://weather.com/en-IN/weather/today/l/" + location_id
