@@ -1,10 +1,11 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
+    // "width": 1880, // Waybar width
     // Choose the order of the modules
     "modules-left": ["custom/fedora", "custom/updates", "tray", "custom/apps"],
     "modules-center": ["hyprland/workspaces", "custom/music"],
-    "modules-right": ["custom/weather", "pulseaudio", "backlight", "battery", "clock", "custom/power"],
+    "modules-right": ["custom/weather", "pulseaudio", "backlight", "network", "battery", "clock", "custom/power"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
@@ -41,16 +42,28 @@
         "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "   {signalStrength}%",
+        "format-ethernet": "  {ipaddr}",
+        "format-disconnected": "Not connected", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty -e nmtui"
+    },
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
         "format": "{icon}",
-        "format-charging": "󰂄",
-        "format-plugged": "󰂄",
-        "format-alt": "{capacity}% {icon}",
-        "format-icons": ["󰂎",  "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-charging": "",
+        "format-plugged": "",
+        "format-alt": "{icon}",
+        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -67,15 +80,15 @@
         "format": ""
     },
     "custom/fedora": {
-        "tooltip-format": "{}",
-        "exec": "bash ~/.config/waybar/scripts/os.sh",
-        "on-click": "kitty",
-	"format": ""
+    	"format": "",
+    	"tooltip-format": "{}",
+    	"exec": "bash ~/.config/waybar/scripts/os.sh",
+    	"on-click": "kitty"
     },
     "custom/updates": {
 	"exec": "bash ~/.config/waybar/scripts/checkupdates.sh", // <--- path to script
 	"on-click": "bash ~/.config/waybar/scripts/checkupdates.sh", // refresh on click
-	"on-click-right": "swaymsg exec '$term -e sudo dnf update'", // update on right click    
+	"on-click-right": "swaymsg exec 'kitty -e sudo dnf update'", // update on right click    
 	"interval": 900, // refresh every 15 minutes
 	"return-type": "json",
 	"format": "{icon}",
