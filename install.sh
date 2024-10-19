@@ -56,9 +56,11 @@ mv -i -f * ~/.config
 echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers
 mkdir ~/.local/share/fonts
+mkdir ~/.icons
 cd ~/Downloads/myfedorahyprland/extras
 mv *.png ~/Pictures/Hyprpapers
 mv *.ttf ~/.local/share/fonts
+mv * ~/.icons
 echo "Cleaning up..."
 cd ~/Downloads
 rm -rf myfedorahyprland
