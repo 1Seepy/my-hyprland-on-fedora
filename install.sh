@@ -39,6 +39,9 @@ sudo dnf install wl-clipboard
 sudo dnf copr enable azandure/clipse & echo "Enabling COPR repository..."
 sudo dnf install clipse
 echo "Installed clipse."
+echo "Installing btop..."
+sudo dnf install btop
+echo "Installed btop."
 echo "Installing pyquery..."
 sudo dnf install python3-pip
 pip install pyquery
