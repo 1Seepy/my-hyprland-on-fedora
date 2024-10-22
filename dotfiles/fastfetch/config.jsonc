@@ -5,97 +5,91 @@
         "height": 18
     },
     "display": {
-        "separator": " : "
+        "separator": "  "
     },
     "modules": [
         {
-            "type": "custom",
-            "format": "\u001b[36m    kendrick lamar"
+            "type": "title",
+            "key": "    "
         },
         {
             "type": "custom",
-            "format": "┌──────────────────────────────────────────┐"
+            "format": "┌──────────────────────────────────────────",
         },
+        "break",
         {
             "type": "os",
-            "key": "   OS",
+            "key": "   os",
             "keyColor": "red"
         },
         {
             "type": "kernel",
-            "key": "   Kernel",
+            "key": "   kernel",
             "keyColor": "red"
         },
+        "break",
         {
             "type": "packages",
-            "key": "   Packages",
+            "key": "   pkgs",
             "keyColor": "green"
         },
         {
             "type": "display",
-            "key": "   Display",
+            "key": "  󰍹 display",
             "keyColor": "green"
         },
+        "break",
         {
             "type": "wm",
-            "key": "   WM",
+            "key": "   wm",
             "keyColor": "yellow"
         },
         {
             "type": "terminal",
-            "key": "   Terminal",
+            "key": "   terminal",
             "keyColor": "yellow"
-        },
-        {
-            "type": "custom",
-            "format": "└──────────────────────────────────────────┘"
         },
         "break",
         {
-            "type": "title",
-            "key": "  "
-        },
-        {
-            "type": "custom",
-            "format": "┌──────────────────────────────────────────┐"
-        },
-        {
             "type": "cpu",
             "format": "{1}",
-            "key": "   CPU",
+            "key": "   cpu",
             "keyColor": "blue"
         },
         {
             "type": "gpu",
             "format": "{2}",
-            "key": "   GPU",
+            "key": "   gpu",
             "keyColor": "blue"
         },
+        "break",
         {
             "type": "gpu",
             "format": "{3}",
-            "key": "   GPU Driver",
+            "key": "   gpu driver",
             "keyColor": "magenta"
         },
         {
              "type": "memory",
-            "key": "   Memory",
+            "key": "   ram",
             "keyColor": "magenta"
-        },      
+        },
+        "break",
         {
             "type": "command",
-            "key": "  󱦟 OS Age ",
+            "key": "  󱦟 os age ",
             "keyColor": "31",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": "  󱫐 Uptime ",
+            "key": "  󱫐 uptime ",
             "keyColor": "red"
         },
+        "break",
         {
             "type": "custom",
-            "format": "└──────────────────────────────────────────┘"
+            "format": "└──────────────────────────────────────────"
         },
 	{
             "type": "colors",
