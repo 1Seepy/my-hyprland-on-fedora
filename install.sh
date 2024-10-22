@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo "My Hyprland on Fedora will now install onto your system."
 read -p "Proceed (y/n)? " choice
 case "$choice" in 
