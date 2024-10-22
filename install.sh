@@ -8,43 +8,44 @@ case "$choice" in
   * ) echo "I'll assume that means no, for safety." & exit;;
 esac
 echo "Updating..."
-sudo dnf update
+sudo dnf update -y
 echo "Updated."
 echo "Installing Hyprland..."
-sudo dnf install hyprland
-sudo dnf install hyprland-devel
-sudo dnf install hyprpaper
-sudo dnf install hyprpicker
-sudo dnf install hyprlock
+sudo dnf install hyprland -y
+sudo dnf install hyprland-devel -y
+sudo dnf install hyprpaper -y
+sudo dnf install hyprpicker -y
+sudo dnf install hyprlock -y
+sudo dnf install hypridle -y
 echo "Installed Hyprland."
 echo "Installing kitty..."
-sudo dnf install kitty
+sudo dnf install kitty -y
 echo "Installed kitty."
 echo "Installing fastfetch..."
-sudo dnf install fastfetch
+sudo dnf install fastfetch -y
 echo "Installed fastfetch."
 echo "Installing rofi..."
-sudo dnf install rofi-wayland
+sudo dnf install rofi-wayland -y
 echo "Installed rofi."
 echo "Installing dunst..."
-sudo dnf install dunst
+sudo dnf install dunst -y
 echo "Installed dunst."
 echo "Installing waybar..."
-sudo dnf install waybar
+sudo dnf install waybar -y
 echo "Installed waybar."
 echo "Installing wlogout..."
 sudo dnf install wlogout
 echo "Installed wlogout."
 echo "Installing clipse..."
-sudo dnf install wl-clipboard
-sudo dnf copr enable azandure/clipse & echo "Enabling COPR repository..."
-sudo dnf install clipse
+sudo dnf install wl-clipboard -y
+sudo dnf copr enable azandure/clipse -y
+sudo dnf install clipse -y
 echo "Installed clipse."
 echo "Installing btop..."
-sudo dnf install btop
+sudo dnf install btop -y
 echo "Installed btop."
 echo "Installing pyquery..."
-sudo dnf install python3-pip
+sudo dnf install python3-pip -y
 pip install pyquery
 echo "Installed pyquery."
 echo "Cloning dotfiles..."
