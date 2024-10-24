@@ -11,12 +11,14 @@ echo "Updating..."
 sudo dnf update -y
 echo "Updated."
 echo "Installing Hyprland..."
+sudo dnf copr enable solopasha/hyprland -y
 sudo dnf install hyprland -y
 sudo dnf install hyprland-devel -y
 sudo dnf install hyprpaper -y
 sudo dnf install hyprpicker -y
 sudo dnf install hyprlock -y
 sudo dnf install hypridle -y
+sudo dnf install hyprshot -y
 echo "Installed Hyprland."
 echo "Installing kitty..."
 sudo dnf install kitty -y
