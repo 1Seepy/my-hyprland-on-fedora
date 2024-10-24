@@ -1,2 +1,3 @@
 #!/bin/bash
-fastfetch
+$fetch = fastfetch
+kitty --class $fetch -e $fetch

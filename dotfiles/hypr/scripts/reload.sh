@@ -1,8 +1,8 @@
 #!/bin/bash
-killall dunst & killall waybar
-dunst & waybar
+killall dunst
+killall waybar
+killall wlsunset
 killall hyprpaper
-hyprpaper
-hyprpaper
-hyprpaper
+dunst & waybar & wlsunset -l 43 -L -76
+sleep 1
 hyprpaper
