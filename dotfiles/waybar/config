@@ -45,25 +45,24 @@
     "network": {
         "format": "{ifname}",
         "format-wifi": "   {signalStrength}%",
-        "format-ethernet": "  {ipaddr}",
+        "format-ethernet": "󰀂  {ipaddr}",
         "format-disconnected": "Not connected", //An empty format will hide the module.
         "tooltip-format": " {ifname} via {gwaddri}",
         "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "kitty -e nmtui"
+        "on-click": "kitty -e nm-connection-editor"
     },
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
-        "format-charging": "",
-        "format-plugged": "",
-        "format-alt": "{icon}",
-        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""]
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "󰂄",
+        "format-icons": ["󰂎",  "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -88,7 +87,7 @@
     "custom/updates": {
 	"exec": "bash ~/.config/waybar/scripts/checkupdates.sh", // <--- path to script
 	"on-click": "bash ~/.config/waybar/scripts/checkupdates.sh", // refresh on click
-	"on-click-right": "swaymsg exec 'kitty -e sudo dnf update'", // update on right click    
+	"on-click-right": "kitty -e sudo dnf update -y", // update on right click    
 	"interval": 900, // refresh every 15 minutes
 	"return-type": "json",
 	"format": "{icon}",
@@ -109,6 +108,6 @@
     	"format": "Apps",
     	"tooltip": "false",
     	"on-click": "rofi -show drun",
-    	"on-click-right": "~/.config/waybar/scripts/keybinds.sh"
+    	"on-click-right": "bash ~/.config/waybar/scripts/keybinds.sh"
     }
 }

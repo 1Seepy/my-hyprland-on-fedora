@@ -29,9 +29,9 @@ echo "Installed fastfetch."
 echo "Installing rofi..."
 sudo dnf install rofi-wayland -y
 echo "Installed rofi."
-echo "Installing dunst..."
-sudo dnf install dunst -y
-echo "Installed dunst."
+echo "Installing swaync..."
+sudo dnf install swaync -y
+echo "Installed swaync."
 echo "Installing waybar..."
 sudo dnf install waybar -y
 echo "Installed waybar."

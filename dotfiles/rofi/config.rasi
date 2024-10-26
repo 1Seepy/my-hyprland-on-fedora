@@ -62,7 +62,7 @@ window {
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                15px;
-    background-color:             rgba(20, 20, 20, 0.4);
+    background-color:             rgba(20, 20, 20, 0.0);
 }
 
 /* ---- Mainbox ---- */
@@ -71,7 +71,8 @@ mainbox {
     orientation:                  horizontal;
     spacing:                      0px;
     margin:                       0px;
-    background-color:             transparent;
+    border-radius:                15px;
+    background-color:             rgba(20, 20, 20, 0.0);
     children:                     ["listbox"];
 }
 
@@ -86,7 +87,8 @@ imagebox {
 /* ---- Listbox ---- */
 listbox {
     spacing:                     20px;
-    background-color:            transparent;
+    border-radius:               15px;
+    background-color:            rgba(20, 20, 20, 0.0);
     orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
 }
@@ -164,8 +166,9 @@ listview {
     spacing:                      0px;
     padding:                      10px;
     margin:                       0px;
-    background-color:             transparent;
+    background-color:             rgba(10, 10, 10, 0.4);
     border:                       0px;
+    border-radius:                15px;
 }
 
 /* ---- Element ---- */
