@@ -7,7 +7,7 @@
 @define-color mantle        rgba(30,  32,  48,  1); /* #000000 */
 @define-color crust         rgba(24,  25,  38,  1); /* #000000 */
 
-@define-color mountaintop   rgba(26,  44,  116, 1); /* #000000 */
+@define-color mountaintop   rgba(26,  44,  116, 1); /* #1a2c74 */
 @define-color mountainmid   rgba(45,  131, 214, 1); /* #000000 */
 @define-color mountainbase  rgba(18,  146, 183, 1); /* #000000 */
 @define-color sky           rgba(47,  158, 250, 1); /* #000000 */

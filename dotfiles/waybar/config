@@ -3,7 +3,7 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     // "width": 1880, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["custom/fedora", "custom/updates", "tray", "custom/apps"],
+    "modules-left": ["custom/fedora", "custom/updates", "tray", "hyprland/window", "custom/apps"],
     "modules-center": ["hyprland/workspaces", "custom/music"],
     "modules-right": ["custom/weather", "pulseaudio", "backlight", "network", "battery", "clock", "custom/power"],
     "hyprland/workspaces": {
@@ -83,6 +83,9 @@
     	"tooltip-format": "{}",
     	"exec": "bash ~/.config/waybar/scripts/os.sh",
     	"on-click": "kitty"
+    },
+    "hyprland/window": {
+    	
     },
     "custom/updates": {
 	"exec": "bash ~/.config/waybar/scripts/checkupdates.sh", // <--- path to script
