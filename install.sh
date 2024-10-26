@@ -1,4 +1,5 @@
 #!/bin/bash
+today = $(date)
 clear
 echo "My Hyprland on Fedora will now install onto your system."
 read -p "Proceed (N/y)? " choice
@@ -18,16 +19,21 @@ echo "Installed packages."
 echo "Cloning dotfiles..."
 mkdir ~/Downloads/myfedorahyprland1324
 git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedorahyprland1324
+mkdir ~/.config-old/backup_$today
+cd ~/.config
+mv * ~/.config-old/backup_$today
 cd ~/Downloads/myfedorahyprland1324/dotfiles
-cp -f -r * ~/.config
+mv -f * ~/.config
+cd ~/.config-old/backup_$today
+mv * ~/.config
 echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers
 mkdir ~/.local/share/fonts
 mkdir ~/.icons
 cd ~/Downloads/myfedorahyprland1324/extras
-cp *.png ~/Pictures/Hyprpapers
-cp *.ttf ~/.local/share/fonts
-cp -r * ~/.icons
+mv -f *.png ~/Pictures/Hyprpapers
+mv -f *.ttf ~/.local/share/fonts
+mv -f * ~/.icons
 echo "Cleaning up..."
 cd ~/Downloads
 rm -rf myfedorahyprland1324
