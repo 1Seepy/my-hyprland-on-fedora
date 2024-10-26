@@ -1,78 +1,41 @@
 #!/bin/bash
 clear
 echo "My Hyprland on Fedora will now install onto your system."
-read -p "Proceed (y/n)? " choice
+read -p "Proceed (N/y)? " choice
 case "$choice" in 
   y|Y ) echo "Continuing.";;
   n|N ) exit;;
-  * ) echo "I'll assume that means no, for safety." & exit;;
+  * ) exit;;
 esac
 echo "Updating..."
 sudo dnf update -y
 echo "Updated."
-echo "Installing Hyprland..."
-sudo dnf copr enable solopasha/hyprland -y
-sudo dnf install hyprland -y
-sudo dnf install hyprland-devel -y
-sudo dnf install hyprpaper -y
-sudo dnf install hyprpicker -y
-sudo dnf install hyprlock -y
-sudo dnf install hypridle -y
-sudo dnf install hyprshot -y
-echo "Installed Hyprland."
-echo "Installing kitty..."
-sudo dnf install kitty -y
-echo "Installed kitty."
-echo "Installing fastfetch..."
-sudo dnf install fastfetch -y
-echo "Installed fastfetch."
-echo "Installing rofi..."
-sudo dnf install rofi-wayland -y
-echo "Installed rofi."
-echo "Installing swaync..."
-sudo dnf install swaync -y
-echo "Installed swaync."
-echo "Installing waybar..."
-sudo dnf install waybar -y
-echo "Installed waybar."
-echo "Installing wlogout..."
-sudo dnf install wlogout
-echo "Installed wlogout."
-echo "Installing clipse..."
-sudo dnf install wl-clipboard -y
-sudo dnf copr enable azandure/clipse -y
-sudo dnf install clipse -y
-echo "Installed clipse."
-echo "Installing btop..."
-sudo dnf install btop -y
-echo "Installed btop."
-echo "Installing pyquery..."
-sudo dnf install python3-pip -y
+echo "Installing packages..."
+sudo dnf copr enable solopasha/hyprland azandure/clipse -y
+sudo dnf install fish hyprland hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip
 pip install pyquery
-echo "Installed pyquery."
+echo "Installed packages."
 echo "Cloning dotfiles..."
-mkdir ~/Downloads/myfedorahyprland
-git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedorahyprland
-cd ~/Downloads/myfedorahyprland/dotfiles
-echo "If you have any configurations already setup, the terminal will now prompt you if you would like to replace them with these dotfiles. I would recommend replacing any defaults, but keeping any you made yourself."
-echo "If you don't get prompted to overwrite any configurations, you can ignore this message."
-mv -i -f * ~/.config
+mkdir ~/Downloads/myfedorahyprland1324
+git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedorahyprland1324
+cd ~/Downloads/myfedorahyprland1324/dotfiles
+cp -f -r * ~/.config
 echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers
 mkdir ~/.local/share/fonts
 mkdir ~/.icons
-cd ~/Downloads/myfedorahyprland/extras
-mv *.png ~/Pictures/Hyprpapers
-mv *.ttf ~/.local/share/fonts
-mv * ~/.icons
+cd ~/Downloads/myfedorahyprland1324/extras
+cp *.png ~/Pictures/Hyprpapers
+cp *.ttf ~/.local/share/fonts
+cp -r * ~/.icons
 echo "Cleaning up..."
 cd ~/Downloads
-rm -rf myfedorahyprland
+rm -rf myfedorahyprland1324
 echo "Done!"
-read -p "To enter Hyprland you must reboot. Reboot now? " choice
+read -p "To enter Hyprland you must reboot. Reboot later? [Y/n] " choice
 case "$choice" in 
-  y|Y ) systemctl reboot;;
-  n|N ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
-  * ) echo "I'll assume that means no, for safety." & echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
+  n|N ) systemctl reboot;;
+  y|Y ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
+  * ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
 esac
 exit
