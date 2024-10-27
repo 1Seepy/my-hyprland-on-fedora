@@ -4,3 +4,4 @@
 * grub
 * lockscreen
 * make fetch better
+* global colors.css
