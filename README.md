@@ -17,7 +17,8 @@ pip install pyquery
 ```
 * Clone the repository
 * Move the dotfiles into ~/.config
-* (If a directory below isn't present, create it.)
+
+(If a directory below isn't present, create it.)
 * Move any wallpapers into ~/Pictures/Hyprpapers
 * Move the cursor to ~/.icons
 * Move the fonts to ~/.local/share/fonts
