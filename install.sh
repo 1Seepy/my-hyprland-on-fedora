@@ -12,23 +12,21 @@ sudo dnf update -y
 echo "Updated."
 echo "Installing packages..."
 sudo dnf copr enable solopasha/hyprland azandure/clipse -y
-sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip
+sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip -y
 pip install pyquery
 echo "Installed packages."
 echo "Cloning dotfiles..."
-mkdir ~/Downloads/myfedorahyprland1324
+mkdir ~/Downloads/myfedorahyprland1324 ~/.configtemp
 git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedorahyprland1324
-mkdir ~/.configtemp
 cd ~/.config
 mv * ~/.configtemp
 cd ~/Downloads/myfedorahyprland1324/dotfiles
 mv -f * ~/.config
+echo "Restoring..."
 cd ~/.configtemp
 mv * ~/.config
 echo "Prettying up..."
-mkdir ~/Pictures/Hyprpapers
-mkdir ~/.local/share/fonts
-mkdir ~/.icons
+mkdir ~/Pictures/Hyprpapers ~/.local/share/fonts ~/.icons
 cd ~/Downloads/myfedorahyprland1324/extras
 mv -f *.png ~/Pictures/Hyprpapers
 mv -f *.ttf ~/.local/share/fonts
