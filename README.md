@@ -4,6 +4,7 @@ Installation can be done manually or through the install script.
 Automatic install:
 * Download the install script
 * Execute it in your terminal
+
 Manual install:
 * Clone the repository
 * Move the dotfiles into ~/.config
