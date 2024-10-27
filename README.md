@@ -10,11 +10,11 @@ Installation can be done manually or through the install script.
 
 ### Manual install
 * Install dependendies:
-'''
+```
 sudo dnf copr enable solopasha/hyprland azandure/clipse -y
 sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip
 pip install pyquery
-'''
+```
 * Clone the repository
 * Move the dotfiles into ~/.config
 * (If a directory below isn't present, create it.)
