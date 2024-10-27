@@ -5,3 +5,4 @@
 * lockscreen
 * make fetch better
 * global colors.css
+* keybinds script
