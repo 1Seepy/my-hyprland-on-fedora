@@ -1,5 +1,7 @@
 Installation can be done manually or through the install script.
+
 *WARNING!* The install script will erase any configurations you already have. Make backups.
+
 *Disclaimer:* This was designed for Fedora. The install script *will not* work on any distro not very close to fedora, and the dotfiles I cannot give any guarantees on.
 
 Automatic install:
