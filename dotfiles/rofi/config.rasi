@@ -9,7 +9,7 @@
 */
 
 * {
-    background:   rgba(20,  20,  20,  1);
+    background:   rgba(20,  25,  35,  1);
     foreground:   rgba(248, 252, 237, 1);
     mountaintop:  rgba(26,  44,  116, 1);
     mountainmid:  rgba(45,  131, 214, 1);
@@ -28,8 +28,8 @@
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "Fira Sans 11";
-    show-icons:                 false;
+    font:                       "Fira Sans 12";
+    show-icons:                 true;
     icon-theme:                 "kora";
     display-drun:               "APPS";
     display-run:                "RUN";
@@ -46,7 +46,7 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:                        300px;
+    width:                        800px;
     x-offset:                     0px;
     y-offset:                     230px;
     spacing:                      0px;
@@ -154,7 +154,7 @@ button selected {
 /* ---- Listview ---- */
 listview {
     enabled:                      true;
-    columns:                      1;
+    columns:                      3;
     lines:                        8;
     cycle:                        true;
     dynamic:                      true;
@@ -166,7 +166,7 @@ listview {
     spacing:                      0px;
     padding:                      10px;
     margin:                       0px;
-    background-color:             rgba(10, 10, 10, 0.4);
+    background-color:             @background;
     border:                       0px;
     border-radius:                15px;
 }
@@ -177,14 +177,14 @@ element {
     padding:                      10px;
     margin:                       5px;
     cursor:                       pointer;
-    background-color:             @background;
+    background-color:             transparent;
     border-radius:                15px;
     border:                       3px;
     border-color:                 @clouds;
 }
 
 element normal.normal {
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @foreground;
     border-color:                transparent;
 }
@@ -215,7 +215,7 @@ element selected.active {
 }
 
 element alternate.normal {
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @foreground;
     border-color:                transparent;
 }
