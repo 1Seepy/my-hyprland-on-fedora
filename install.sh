@@ -22,6 +22,8 @@ cd ~/.config
 mv * ~/.configtemp
 cd ~/Downloads/myfedorahyprland1324/dotfiles
 mv -f * ~/.config
+cd ~/.config/swaync
+cp style.css /etc/xdg/swaync
 echo "Restoring..."
 cd ~/.configtemp
 mv * ~/.config
