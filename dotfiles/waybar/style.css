@@ -8,14 +8,10 @@
 
 #waybar {
   background: transparent;
-  border: 3px solid transparent;
-  border-radius: 10px;
-  color: @sun;
-  margin: 5px 5px;
 }
 
 #workspaces {
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 5px;
   background-color: transparent;
   margin-left: 15px;
@@ -23,25 +19,24 @@
 
 #workspaces button {
   color: @clouds;
-  border-radius: 15px;
   padding: 0.4rem;
+  border-radius: 10px;
 }
 
 #workspaces button.active {
   color: @sun;
-  background-color: transparent;
-  border-radius: 15px;
 }
 
 #workspaces button:hover {
   color: @sky;
   background-color: transparent;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #custom-music,
-#tray,
 #window,
+#tray,
+#pulseaudio,
 #backlight,
 #network,
 #clock,
@@ -52,11 +47,12 @@
 #custom-updates,
 #custom-fedora,
 #custom-weather,
-#custom-apps {
+#custom-apps,
+#custom-notification {
   color: @sun;
   background-color: @black;
-  border: 3px solid @clouds;
-  border-radius: 15px;
+  border: 2px solid @clouds;
+  border-radius: 10px;
   padding: 0.5rem 1rem;
   margin: 5px 5px;
 }
@@ -79,17 +75,4 @@
 
 #battery.warning:not(.charging) {
   color: @red;
-}
-
-#backlight {
-  color: @yellow;
-}
-
-#pulseaudio {
-  margin-left: 1rem;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 15px;
 }

@@ -9,7 +9,7 @@
 */
 
 * {
-    background:   rgba(20,  25,  35,  1);
+    background:   rgba(0,   15,  30,  1);
     foreground:   rgba(248, 252, 237, 1);
     mountaintop:  rgba(26,  44,  116, 1);
     mountainmid:  rgba(45,  131, 214, 1);
@@ -20,15 +20,16 @@
     water:        rgba(38,  106, 181, 1);
     bushes:       rgba(31,  67,  141, 1);
     leaves:       rgba(43,  129, 206, 1);
+    border-curve: 10px;
 
 }
 
-* { border-width: 3px; }
+* { border-width: 2px; }
 
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "Fira Sans 12";
+    font:                       "Fira Code 12";
     show-icons:                 true;
     icon-theme:                 "kora";
     display-drun:               "APPS";
@@ -61,8 +62,8 @@ window {
     anchor:                       north;
     fullscreen:                   false;
     enabled:                      true;
-    border-radius:                15px;
-    background-color:             rgba(20, 20, 20, 0.0);
+    border-radius:                @border-curve;
+    background-color:             transparent;
 }
 
 /* ---- Mainbox ---- */
@@ -71,8 +72,8 @@ mainbox {
     orientation:                  horizontal;
     spacing:                      0px;
     margin:                       0px;
-    border-radius:                15px;
-    background-color:             rgba(20, 20, 20, 0.0);
+    border-radius:                @border-curve;
+    background-color:             transparent;
     children:                     ["listbox"];
 }
 
@@ -87,8 +88,8 @@ imagebox {
 /* ---- Listbox ---- */
 listbox {
     spacing:                     20px;
-    border-radius:               15px;
-    background-color:            rgba(20, 20, 20, 0.0);
+    border-radius:               @border-curve;
+    background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
 }
@@ -104,9 +105,9 @@ inputbar {
     text-color:                   @sun;
     spacing:                      10px;
     padding:                      15px;
-    border:                       3px;
+    border:                       @border-width;
     border-color:                 @clouds;
-    border-radius:                15px;
+    border-radius:                @border-curve;
     background-color:             @background;
     children:                     [ "textbox-prompt-colon", "entry" ];
 }
@@ -139,7 +140,7 @@ mode-switcher{
 
 button {
     padding:                      10px;
-    border-radius:                15px;
+    border-radius:                @border-curve;
     background-color:             @background;
     text-color:                   inherit;
     cursor:                       pointer;
@@ -168,7 +169,7 @@ listview {
     margin:                       0px;
     background-color:             @background;
     border:                       0px;
-    border-radius:                15px;
+    border-radius:                @border-curve;
 }
 
 /* ---- Element ---- */
@@ -178,8 +179,8 @@ element {
     margin:                       5px;
     cursor:                       pointer;
     background-color:             transparent;
-    border-radius:                15px;
-    border:                       3px;
+    border-radius:                @border-curve;
+    border:                       @border-width;
     border-color:                 @clouds;
 }
 
@@ -252,13 +253,13 @@ message {
     margin:20px 0px 0px 0px;
     padding:0px;
     spacing:0px;
-    border-radius: 15px;
+    border-radius: @border-curve;
 }
 
 textbox {
     padding:                     15px;
     margin:                      0px;
-    border-radius:               3px;
+    border-radius:               @border-curve;
     background-color:            @background;
     text-color:                  @foreground;
     vertical-align:              0.5;
@@ -267,8 +268,8 @@ textbox {
 
 error-message {
     padding:                     15px;
-    border-radius:               15px;
-    border:                      3px;
+    border-radius:               @border-curve;
+    border:                      @border-width;
     background-color:            @background;
     text-color:                  @foreground;
 }

@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/fedora", "custom/updates", "tray", "custom/apps"],
     "modules-center": ["hyprland/workspaces", "custom/music"],
-    "modules-right": ["custom/weather", "pulseaudio", "backlight", "network", "battery", "clock", "custom/power"],
+    "modules-right": ["custom/weather", "pulseaudio", "backlight", "network", "battery", "clock", "custom/notification", "custom/power"],
     "hyprland/workspaces": {
          "disable-scroll": false,
          "sort-by-name": true,
@@ -71,7 +71,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "amixer set Master toggle"
     },
     "custom/power": {
         "tooltip": false,
@@ -108,6 +108,25 @@
     	"format": "Apps",
     	"tooltip": "false",
     	"on-click": "rofi -show drun",
-    	"on-click-right": "bash ~/.config/waybar/scripts/keybinds.sh"
-    }
+    	"on-click-right": "bash ~/.config/waybar/scripts/keybinds.sh",
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'>/span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
 }
