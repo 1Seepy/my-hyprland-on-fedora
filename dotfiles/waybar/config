@@ -106,9 +106,9 @@
     },
     "custom/apps": {
     	"format": "Apps",
-    	"tooltip": "false",
+    	"tooltip-format": "Right click for keybind list",
     	"on-click": "rofi -show drun",
-    	"on-click-right": "bash ~/.config/waybar/scripts/keybinds.sh",
+    	"on-click-right": "xdg-open ~/.config/waybar/scripts/keybinds.sh",
     },
     "custom/notification": {
         "tooltip": false,

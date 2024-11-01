@@ -1,4 +1,11 @@
-#!/bin/bash
-kitty
-echo "Ctrl + Super + R = Launcher"
-sleep 10000
+echo "SUPER + Space = App launcher"
+echo "SUPER + C = Close window"
+echo "SUPER + Q = Open terminal"
+echo "SUPER + B = Open browser"
+echo "SUPER + E = Open file browser"
+echo "SUPER + M = Open power menu"
+echo "SUPER + L = Lock screen"
+echo "SUPER + Shift + W = Reload desktop"
+echo "SUPER + Print = Screenshot"
+echo "SUPER + Shift + Print = Screenshot region"
+echo "You can find & configure these keybinds at '~/.config/hypr/conf/binds.conf'"

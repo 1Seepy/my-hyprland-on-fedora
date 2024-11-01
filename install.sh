@@ -30,7 +30,7 @@ mv * ~/.config
 echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers ~/.local/share/fonts ~/.icons
 cd ~/Downloads/myfedorahyprland1324/extras
-mv -f *.png ~/Pictures/Hyprpapers
+mv -f wallpaper* ~/Pictures/Hyprpapers
 mv -f *.ttf ~/.local/share/fonts
 mv -f * ~/.icons
 echo "Cleaning up..."
