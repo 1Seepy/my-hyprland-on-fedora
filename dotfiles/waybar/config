@@ -1,8 +1,8 @@
+terminal = "kitty"
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer, don't change!
     "position": "top", // Waybar position (top|bottom|left|right)
-    // "width": 1880, // Waybar width
-    // Choose the order of the modules
+    // "width": 1880,
     "modules-left": ["custom/fedora", "custom/updates", "tray", "custom/apps"],
     "modules-center": ["hyprland/workspaces", "custom/music"],
     "modules-right": ["custom/weather", "pulseaudio", "backlight", "network", "battery", "clock", "custom/notification", "custom/power"],
@@ -52,7 +52,7 @@
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "kitty -e nm-connection-editor"
+        "on-click": "$terminal -e nm-connection-editor"
     },
     "battery": {
         "states": {
@@ -82,12 +82,12 @@
     	"format": "",
     	"tooltip-format": "{}",
     	"exec": "bash ~/.config/waybar/scripts/os.sh",
-    	"on-click": "kitty"
+    	"on-click": "$terminal"
     },
     "custom/updates": {
 	"exec": "bash ~/.config/waybar/scripts/checkupdates.sh", // <--- path to script
 	"on-click": "bash ~/.config/waybar/scripts/checkupdates.sh", // refresh on click
-	"on-click-right": "kitty -e sudo dnf update -y", // update on right click    
+	"on-click-right": "$terminal -e sudo dnf update -y", // update on right click
 	"interval": 900, // refresh every 15 minutes
 	"return-type": "json",
 	"format": "{icon}",
@@ -108,7 +108,7 @@
     	"format": "Apps",
     	"tooltip-format": "Right click for keybind list",
     	"on-click": "rofi -show drun",
-    	"on-click-right": "xdg-open ~/.config/waybar/scripts/keybinds.sh",
+    	"on-click-right": "$terminal -e fish ~/.config/waybar/scripts/keybinds.sh",
     },
     "custom/notification": {
         "tooltip": false,
