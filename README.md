@@ -23,9 +23,9 @@ flatpak override --user --filesystem=/usr/share/icons:ro
 * Clone the repository
 * Move the dotfiles into ~/.config
 
-(If a directory below isn't present, create it.)
-* Move any wallpapers into ~/Pictures/Hyprpapers
-* Move the cursor to ~/.icons
-* Move the fonts to ~/.local/share/fonts
+(If a directory below doesn't exist, create it.)
+* Move any wallpapers into ```~/Pictures/Hyprpapers```
+* Move the cursor to ```/usr/share/icons```
+* Move the fonts to ```~/.local/share/fonts```
 
 ##### If you have any issues, idk.
