@@ -16,7 +16,7 @@ sudo dnf copr enable azandure/clipse
 sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip
 pip install pyquery
 ```
-* Allow flatpaks to use system themes
+* Allow flatpaks to use system themes:
 ```
 flatpak override --user --filesystem=/usr/share/icons:ro
 ```
