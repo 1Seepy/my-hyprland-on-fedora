@@ -32,7 +32,8 @@ mkdir ~/Pictures/Hyprpapers ~/.local/share/fonts ~/.icons
 cd ~/Downloads/myfedorahyprland1324/extras
 mv -f wallpaper* ~/Pictures/Hyprpapers
 mv -f *.ttf ~/.local/share/fonts
-mv -f * ~/.icons
+sudo mv -f * /usr/share/icons
+flatpak override --user --filesystem=/usr/share/icons:ro
 echo "Cleaning up..."
 cd ~/Downloads
 rm -rf myfedorahyprland1324
@@ -40,8 +41,8 @@ rm -rf ~/.configtemp
 echo "Done!"
 read -p "To enter Hyprland you must reboot. Reboot later? [Y/n] " choice
 case "$choice" in 
-  n|N ) systemctl reboot;;
   y|Y ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
+  n|N ) systemctl reboot;;
   * ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
 esac
 exit

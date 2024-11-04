@@ -1,4 +1,4 @@
-@import url("../rice/colors.css");
+﻿@import url("../rice/colors.css");
 
 * {
   font-family: FantasqueSansMono Nerd Font;
@@ -11,7 +11,7 @@
 }
 
 #workspaces {
-  border-radius: 10px;
+  border-radius: 1.875rem;
   margin: 5px;
   background-color: transparent;
   margin-left: 15px;
@@ -20,7 +20,7 @@
 #workspaces button {
   color: @clouds;
   padding: 0.4rem;
-  border-radius: 10px;
+  border-radius: 1.875rem;
 }
 
 #workspaces button.active {
@@ -30,7 +30,7 @@
 #workspaces button:hover {
   color: @sky;
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 1.875rem;
 }
 
 #custom-music,
@@ -51,8 +51,8 @@
 #custom-notification {
   color: @sun;
   background-color: @black;
-  border: 2px solid @clouds;
-  border-radius: 10px;
+  border: 3px solid @clouds;
+  border-radius: 1.875rem;
   padding: 0.5rem 1rem;
   margin: 5px 5px;
 }

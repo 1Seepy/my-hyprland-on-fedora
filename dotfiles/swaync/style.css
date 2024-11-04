@@ -1,294 +1,376 @@
+/* Import colors from universal colorsheet */
 @import url("../rice/colors.css");
 
+@define-color bgcolor @black;
+@define-color bgcolor2 rgb(0, 25, 50);
+@define-color textcolor @sun;
+@define-color bordercolor @clouds;
+
+/********************
+ ** Global Styles **
+ ********************/
 * {
+  all: unset;
   font-size: 10px;
-  font-family: "Noto Sans";
-  transition: 100ms;
-  box-shadow: unset;
+  font-family: "Twilio Sans Mono";
+  transition: 200ms;
 }
 
-.control-center .notification-row {
-  background-color: unset;
+/*******************
+ ** Slider Styles **
+ *******************/
+trough highlight {
+  background: #cad3f5;
+  border-radius: 3rem;
 }
 
-.control-center .notification-row .notification-background .notification,
-.control-center .notification-row .notification-background .notification .notification-content,
-.floating-notifications .notification-row .notification-background .notification,
-.floating-notifications.background .notification-background .notification .notification-content {
-  margin-bottom: unset;
+scale trough {
+  margin: 0rem 1rem;
+  background-color: #363a4f;
+  border-radius: 1rem;
+  min-height: 8px;
+  min-width: 70px;
 }
 
-.control-center .notification-row .notification-background .notification {
-  margin-top: 0.150rem;
+slider {
+  background-color: #8aadf4;
 }
 
-.control-center .notification-row .notification-background .notification box,
-.control-center .notification-row .notification-background .notification widget,
-.control-center .notification-row .notification-background .notification .notification-content,
-.floating-notifications .notification-row .notification-background .notification box,
-.floating-notifications .notification-row .notification-background .notification widget,
-.floating-notifications.background .notification-background .notification .notification-content {
-  border: unset;
-  border-radius: 10px;
-  -gtk-outline-radius: 1.159rem;
-  
+/***************************************
+ ** Floating Notifications Background **
+ ***************************************/
+.floating-notifications.background .notification-row .notification-background {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363a4f;
+  border: 3px solid @bordercolor;
+  border-radius: 3rem;
+  margin: 22px;
+  background-color: @bgcolor;
+  color: @textcolor;
+  padding: 0;
 }
 
-.floating-notifications.background .notification-background .notification .notification-content,
-.control-center .notification-background .notification .notification-content {
-  background-color: #1D1D22;
-  padding: 0.818rem;
-  padding-right: unset;
-  margin-right: unset;
+/*************************
+ ** Notification Styles **
+ *************************/
+.floating-notifications.background .notification-row .notification-background .notification {
+  padding: 7px;
+  border-radius: 3rem;
 }
 
-.control-center .notification-row .notification-background .notification.low .notification-content label,
-.control-center .notification-row .notification-background .notification.normal .notification-content label,
-.floating-notifications.background .notification-background .notification.low .notification-content label,
-.floating-notifications.background .notification-background .notification.normal .notification-content label {
-  color: #c7c5d0;
+.floating-notifications.background .notification-row .notification-background .notification.critical {
+  box-shadow: inset 0 0 7px 0 #ed8796;
 }
 
-.control-center .notification-row .notification-background .notification..notification-content image,
-.control-center .notification-row .notification-background .notification.normal .notification-content image,
-.floating-notifications.background .notification-background .notification.low .notification-content image,
-.floating-notifications.background .notification-background .notification.normal .notification-content image {
-  background-color: unset;
-  color: #e2e0f9;
-}
-
-.control-center .notification-row .notification-background .notification.low .notification-content .body,
-.control-center .notification-row .notification-background .notification.normal .notification-content .body,
-.floating-notifications.background .notification-background .notification.low .notification-content .body,
-.floating-notifications.background .notification-background .notification.normal .notification-content .body {
-  color: #92919a;
-}
-
-.control-center .notification-row .notification-background .notification.critical .notification-content,
-.floating-notifications.background .notification-background .notification.critical .notification-content {
-  background-color: #ffb4a9;
-}
-
-.control-center .notification-row .notification-background .notification.critical .notification-content image,
-.floating-notifications.background .notification-background .notification.critical .notification-content image{
-  background-color: unset;
-  color: #ffb4a9;
-}
-
-.control-center .notification-row .notification-background .notification.critical .notification-content label,
-.floating-notifications.background .notification-background .notification.critical .notification-content label {
-  color: #680003;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .summary,
-.floating-notifications.background .notification-background .notification .notification-content .summary {
-  font-family: 'Gabarito', 'Lexend', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .time,
-.floating-notifications.background .notification-background .notification .notification-content .time {
-  font-family: 'Geist', 'AR One Sans', 'Inter', 'Roboto', 'Noto Sans', 'Ubuntu', sans-serif;
-  font-size: 0.8291rem;
-  font-weight: 500;
-  margin-right: 1rem;
-  padding-right: unset;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .body,
-.floating-notifications.background .notification-background .notification .notification-content .body {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 0.8891rem;
-  font-weight: 400;
-  margin-top: 0.310rem;
-  padding-right: unset;
-  margin-right: unset;
-}
-
-.control-center .notification-row .close-button,
-.floating-notifications.background .close-button {
-  background-color: unset;
-  border-radius: 100%;
-  border: none;
-  box-shadow: none;
-  margin-right: 13px;
-  margin-top: 6px;
-  margin-bottom: unset;
-  padding-bottom: unset;
-  min-height: 20px;
-  min-width: 20px;
-  text-shadow: none;
-}
-
-.control-center .notification-row .close-button:hover,
-.floating-notifications.background .close-button:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.control-center {
-  border-radius: 10px;
-  -gtk-outline-radius: 1.705rem;
-  border: 2px solid alpha(@clouds, 0.5);
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.45);
+.floating-notifications.background .notification-row .notification-background .notification .notification-content {
   margin: 7px;
-  background-color: @black;
-  padding: 1.023rem;
 }
 
-.control-center trough {
-  background-color: #45475a;
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
-  min-width: 0.545rem;
-  background-color: transparent;  
+.floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
+  font-size: 1.5rem;
+  color: @textcolor;
 }
 
-.control-center slider {
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
-  min-width: 0.273rem;
-  min-height: 2.045rem;
-  background-color: rgba(199, 197, 208, 0.19);
+.floating-notifications.background .notification-row .notification-background .notification .notification-content .time {
+  color: @textcolor;
 }
 
-.control-center slider:hover {
-  background-color: rgba(199, 197, 208, 0.448);
+.floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
+  color: @textcolor;
 }
 
-.control-center slider:active {
-  background-color: #77767e;
+/*************************
+ ** Close Button Styles **
+ *************************/
+.floating-notifications.background .notification-row .notification-background .close-button {
+  margin: 1rem;
+  padding: 2px;
+  border-radius: 3rem;
+  color: @textcolor;
+  background-color: @bgcolor;
 }
 
-/* title widget */
-
-.widget-title {
-  padding: 0.341rem;
-  margin: unset;
+.floating-notifications.background .notification-row .notification-background .close-button:hover {
+  background-color: #eb5358;
+  color: @textcolor;
 }
 
-.widget-title label {
-  font-family: 'Gabarito', 'Lexend', sans-serif;
-  font-size: 1.364rem;
-  color: #e4e1e6;
-  margin-left: 0.941rem;
+.floating-notifications.background .notification-row .notification-background .close-button:active {
+  background-color: #eb5358;
+  color: @textcolor;
 }
 
-.widget-title button {
-  border: unset;
-  background-color: unset;
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
-  padding: 0.141rem 0.141rem;
-  margin-right: 0.841rem;
+/***************************
+ ** Control Center Styles **
+ ***************************/
+.control-center {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363a4f;
+  border: 3px solid @bordercolor;
+  border-radius: 3rem;
+  margin: 7px;
+  background-color: @bgcolor;
+  color: @textcolor;
+  padding: 14px;
 }
 
-.widget-title button label {
-  font-family: 'Gabarito', sans-serif;
-  font-size: 1.0409rem;
-  color: #e4e1e6;
-  margin-right: 0.841rem;
+/*************************
+ ** Widget Title Styles **
+ *************************/
+.control-center .widget-title > label {
+  color: #cad3f5;
+  font-size: 1.3em;
 }
 
-.widget-title button:hover {
-  background-color: rgba(128, 128, 128, 0.3);
-}
-
-.widget-title button:active {
-  background-color: rgba(128, 128, 128, 0.7);
-}
-
-/* Buttons widget */
-
-.widget-buttons-grid {
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
-  padding: 0.341rem;
-  background-color: rgba(28, 28, 34, 0.35);
-  padding: unset;
-}
-
-.widget-buttons-grid>flowbox {
-  padding: unset;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:first-child {
-  margin-left:unset ;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button {
-  border:none;
-  background-color: unset;
-  border-radius: 9999px;
-  min-width: 5.522rem;
-  min-height: 2.927rem;
-  padding: unset;
-  margin: unset;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button label {
-  font-family: "Materials Symbol Rounded";
-  font-size: 1.3027rem;
-  color: #e4e1e6;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background-color: rgba(128, 128, 128, 0.3);
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:checked {
-  background-color: @hyprland;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:checked label {
-  color: #14141B;
-}
-
-
-/* Volume widget */
-
-.widget-volume {
-  background-color: rgba(28, 28, 34, 0.35);
+/***********************************
+ ** Button Styles in Widget Title **
+ ***********************************/
+.control-center .widget-title button {
+  border-radius: 3rem;
+  color: #cad3f5;
+  background-color: #363a4f;
+  box-shadow: inset 0 0 0 1px #494d64;
   padding: 8px;
-  margin: 8px;
-  -gtk-outline-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
 }
 
-.widget-volume trough {
-  border:unset;
-  background-color: rgba(128, 128, 128, 0.4);
+.control-center .widget-title button:hover {
+  box-shadow: inset 0 0 0 1px #494d64;
+  background-color: #5b6078;
+  color: #cad3f5;
 }
 
-
-.widget-volume trough slider {
-  color:unset;
-  background-color: @hyprland;
-  border-radius: 100%;
-  min-height: 1.25rem;
+.control-center .widget-title button:active {
+  box-shadow: inset 0 0 0 1px #494d64;
+  background-color: #7dc4e4;
+  color: #24273a;
 }
 
-
-/* Mpris widget */
-
-.widget-mpris {
-  background-color: rgba(28, 28, 34, 0.35);
-  padding: 8px;
-  margin: 8px;  
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;  
+/***********************************************
+ ** Notification Row Styles in Control Center **
+ ***********************************************/
+.control-center .notification-row .notification-background {
+  border-radius: 3rem;
+  color: @textcolor;
+  background-color: @bgcolor2;
+  box-shadow: inset 0 0 0 1px #494d64;
+  margin-top: 14px;
 }
 
-.widget-mpris-player {
-  padding: 8px;
-  margin: 8px;
+/**********************************************************
+ ** More Styles for Notification Contents, Actions, etc. **
+ **********************************************************/
+.control-center .notification-row .notification-background .notification {
+  padding: 7px;
+  border: 3px solid @bordercolor;
+  border-radius: 3rem;
 }
 
-.widget-mpris-title {
-  font-weight: bold;
-  font-size: 1.25rem;
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  border-radius: 3rem;
+  color: #cad3f5;
+  background-color: @bgcolor;
+  box-shadow: inset 0 0 0 1px #494d64;
+  margin: 7px;
 }
 
-.widget-mpris-subtitle {
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  box-shadow: inset 0 0 0 1px #494d64;
+  background-color: #363a4f;
+  color: #cad3f5;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  box-shadow: inset 0 0 0 1px #494d64;
+  background-color: #7dc4e4;
+  color: #cad3f5;
+}
+
+/*******************************************
+ ** Close Button Styles in Control Center **
+ *******************************************/
+.control-center .notification-row .notification-background .close-button {
+  margin: 1rem;
+  padding: 2px;
+  border-radius: 9999px;
+  color: @textcolor;
+  background-color: @bgcolor;
+}
+
+/**********************************************
+ ** Hover and Active States for Close Button **
+ **********************************************/
+.control-center .notification-row .notification-background .close-button:hover {
+  background-color: #ed8796;
+  color: #24273a;
+}
+
+.control-center .notification-row .notification-background .close-button:active {
+  background-color: #ed8796;
+  color: #24273a;
+}
+
+/************************************************
+ ** Hover Effects for Notification Backgrounds **
+ ************************************************/
+.control-center .notification-row .notification-background:hover {
+  box-shadow: inset 0 0 0 1px #494d64;
+  background-color: #8087a2;
+  color: #cad3f5;
+}
+
+.control-center .notification-row .notification-background:active {
+  box-shadow: inset 0 0 0 1px #494d64;
+  background-color: #7dc4e4;
+  color: #cad3f5;
+}
+
+/******************************************
+ ** Progress Bar Styles in Notifications **
+ ******************************************/
+.notification.critical progress {
+  background-color: #ed8796;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: #8aadf4;
+}
+
+/*******************************
+ ** Control Center DND Styles **
+ *******************************/
+.control-center-dnd {
+  margin-top: 5px;
+  border-radius: 8px;
+  background: #363a4f;
+  border: 1px solid #494d64;
+  box-shadow: none;
+}
+
+.control-center-dnd:checked {
+  background: #363a4f;
+}
+
+.control-center-dnd slider {
+  background: #494d64;
+  border-radius: 8px;
+}
+
+/***********************
+ ** Widget DND Styles **
+ ***********************/
+.widget-dnd {
+  margin: 0px;
   font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 8px;
+  background: #363a4f;
+  border: 1px solid #494d64;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: #363a4f;
+}
+
+.widget-dnd > switch slider {
+  background: #494d64;
+  border-radius: 8px;
+  border: 1px solid #6e738d;
+}
+
+/********************************
+ ** Music Player Widget Styles **
+ ********************************/
+.widget-mpris .widget-mpris-player {
+  background: #363a4f;
+  padding: 7px;
+}
+
+.widget-mpris .widget-mpris-title {
+  font-size: 1.2rem;
+}
+
+.widget-mpris .widget-mpris-subtitle {
+  font-size: 0.8rem;
+}
+
+/****************************
+ ** Menu Bar Widget Styles **
+ ****************************/
+.widget-menubar > box > .menu-button-bar > button > label {
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
+}
+
+.widget-menubar > box > .menu-button-bar > :last-child {
+  color: #ed8796;
+}
+
+/********************************
+ ** Power Button Widget Styles **
+ ********************************/
+.power-buttons button:hover,
+.powermode-buttons button:hover,
+.screenshot-buttons button:hover {
+  background: #363a4f;
+}
+
+.control-center .widget-label > label {
+  color: #cad3f5;
+  font-size: 2rem;
+}
+
+/************************
+ ** Widget Grid Styles **
+ ************************/
+.widget-buttons-grid {
+  padding-top: 1rem;
+  margin-left: 4rem;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-size: 2.5rem;
+  margin-right: 3rem;
+}
+
+/**************************
+ ** Volume Widget Styles **
+ **************************/
+.widget-volume {
+  padding-top: 1rem;
+}
+
+.widget-volume label {
+  font-size: 1.5rem;
+  color: #7dc4e4;
+}
+
+.widget-volume trough highlight {
+  background: #7dc4e4;
+}
+
+/******************************
+ ** Brightness Widget Styles **
+ ******************************/
+.widget-backlight trough highlight {
+  background: #eed49f;
+}
+
+.widget-backlight label {
+  font-size: 1.5rem;
+  color: #eed49f;
+}
+
+.widget-backlight .KB {
+  padding-bottom: 1rem;
+}
+
+/******************************
+ ** Notification Icon Styles **
+ ******************************/
+.image {
+  border-radius: 1rem;
+  margin-right: 1rem;
 }

@@ -19,14 +19,14 @@ button {
     background-repeat: no-repeat;
 	background-position: center;
 	background-size: 35%;
-	background-color: rgba(0, 15, 45, 0.35); /* @black */
+	background-color: rgba(0, 15, 30, 0.35); /* @black */
 	border: 3px solid transparent;
 }
 
 button:active,
 button:hover {
   color: transparent;
-  background-color: rgba(0, 15, 45, 0.75); /* @black */
+  background-color: rgba(0, 15, 30, 0.75); /* @black */
   border: 3px solid transparent;
 }
 /* 
@@ -46,14 +46,14 @@ Buttons
 }
 
 #lock {
-	border-radius: 25px 0px 0px 0px;
+	border-radius: 60px 0px 0px 0px;
 	border-top: 3px solid @border;
 	border-left: 3px solid @border;
 	background-image: image(url("icons/lock.png"));
 }
 
 #reboot {
-	border-radius: 0px 0px 0px 25px;
+	border-radius: 0px 0px 0px 60px;
 	border-bottom: 3px solid @border;
 	border-left: 3px solid @border;
 	background-image: image(url("icons/reboot.png"));
@@ -70,14 +70,14 @@ Buttons
 }
 
 #suspend {
-	border-radius: 0px 25px 0px 0px;
+	border-radius: 0px 60px 0px 0px;
 	border-top: 3px solid @border;
 	border-right: 3px solid @border;
 	background-image: image(url("icons/suspend.png"));
 }
 
 #hibernate {
-	border-radius: 0px 0px 25px 0px;
+	border-radius: 0px 0px 60px 0px;
 	border-right: 3px solid @border;
 	border-bottom: 3px solid @border;
 	background-image: image(url("icons/hibernate.png"));
