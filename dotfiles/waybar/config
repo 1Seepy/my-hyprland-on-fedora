@@ -51,7 +51,7 @@
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "kitty -e nm-connection-editor"
+        "on-click": "wezterm start nm-connection-editor"
     },
     "battery": {
         "states": {
@@ -81,12 +81,12 @@
     	"format": "",
     	"tooltip-format": "{}",
     	"exec": "bash ~/.config/waybar/scripts/os.sh",
-    	"on-click": "kitty"
+    	"on-click": "wezterm"
     },
     "custom/updates": {
 	"exec": "bash ~/.config/waybar/scripts/checkupdates.sh", // <--- path to script
 	"on-click": "bash ~/.config/waybar/scripts/checkupdates.sh", // refresh on click
-	"on-click-right": "kitty -e sudo dnf update -y", // update on right click
+	"on-click-right": "wezterm start sudo dnf update -y", // update on right click
 	"interval": 900, // refresh every 15 minutes
 	"return-type": "json",
 	"format": "{icon}",
@@ -107,7 +107,7 @@
     	"format": "Apps",
     	"tooltip-format": "Right click for keybind list",
     	"on-click": "rofi -show drun",
-    	"on-click-right": "kitty -e fish ~/.config/waybar/scripts/keybinds.sh",
+    	"on-click-right": "wezterm start fish ~/.config/waybar/scripts/keybinds.sh",
     },
     "custom/notification": {
         "tooltip": false,

@@ -8,6 +8,7 @@
         "separator": "  "
     },
     "modules": [
+        "break",
         {
             "type": "title",
             "key": "    "
@@ -16,77 +17,70 @@
             "type": "custom",
             "format": "┌──────────────────────────────────────────",
         },
-        "break",
         {
             "type": "os",
-            "key": "  os",
+            "key": "│ os",
             "keyColor": "red"
         },
         {
             "type": "kernel",
-            "key": "  kernel",
+            "key": "│ kernel",
             "keyColor": "red"
         },
-        "break",
         {
             "type": "packages",
-            "key": "  pkgs",
+            "key": "│ pkgs",
             "keyColor": "green"
         },
         {
             "type": "display",
-            "key": " 󰍹 display",
+            "key": "│󰍹 display",
             "keyColor": "green"
         },
-        "break",
         {
             "type": "wm",
-            "key": "  wm",
+            "key": "│ wm",
             "keyColor": "yellow"
         },
         {
             "type": "terminal",
-            "key": "  terminal",
+            "key": "│ terminal",
             "keyColor": "yellow"
         },
-        "break",
         {
             "type": "cpu",
             "format": "{1}",
-            "key": "  cpu",
+            "key": "│ cpu",
             "keyColor": "blue"
         },
         {
             "type": "gpu",
             "format": "{2}",
-            "key": "  gpu",
+            "key": "│ gpu",
             "keyColor": "blue"
         },
-        "break",
         {
             "type": "gpu",
             "format": "{3}",
-            "key": "  gpu driver",
+            "key": "│ gpu driver",
             "keyColor": "magenta"
         },
         {
              "type": "memory",
-            "key": "  ram",
+            "key": "│ ram",
             "keyColor": "magenta"
         },
-        "break",
         {
             "type": "command",
-            "key": " 󱦟 os age ",
+            "key": "│󱦟 os age ",
             "keyColor": "31",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": " 󱫐 uptime ",
+            "key": "│󱫐 uptime ",
             "keyColor": "red"
         },
-        "break",
         {
             "type": "custom",
             "format": "└──────────────────────────────────────────"

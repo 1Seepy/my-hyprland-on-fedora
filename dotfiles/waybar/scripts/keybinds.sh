@@ -9,3 +9,4 @@ echo "SUPER + Shift + W = Reload desktop"
 echo "SUPER + Print = Screenshot"
 echo "SUPER + Shift + Print = Screenshot region"
 echo "You can find & configure these keybinds at '~/.config/hypr/conf/binds.conf'"
+sleep infinity

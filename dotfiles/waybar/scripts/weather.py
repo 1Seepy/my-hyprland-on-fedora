@@ -7,9 +7,9 @@ import json
 # weather icons
 weather_icons = {
     "sunnyDay": "",
-    "clearNight": "",
-    "cloudyFoggyDay": "󰖑",
-    "cloudyFoggyNight": "󰖑",
+    "clearNight": "",
+    "cloudyFoggyDay": "",
+    "cloudyFoggyNight": "",
     "rainyDay": "",
     "rainyNight": "",
     "snowyIcyDay": "",
@@ -80,16 +80,16 @@ prediction = html_data("section[aria-label='Hourly Forecast']")(
     "div[data-testid='SegmentPrecipPercentage'] > span"
 ).text()
 prediction = prediction.replace("Chance of Rain", "")
-prediction = f"\n\n    (hourly) {prediction}" if len(prediction) > 0 else prediction
+prediction = f"\n\n  {prediction}" if len(prediction) > 0 else prediction
 
 # tooltip text
 tooltip_text = str.format(
     "{}\n{}\n\n{}\n{}\n{}{}",
     f"<big>{temp} {status}</big>",
     f"<small>{temp_feel_text}</small>",
-    f"<big>{temp_min_max}</big>",
+    f"{temp_min_max}",
     f"{wind_text}\t{humidity_text}",
-    f"{visbility_text}\tAQI {air_quality_index}",
+    f"{visbility_text}\t󰵃 {air_quality_index}",
     f"<i>{prediction}</i>",
 )
 

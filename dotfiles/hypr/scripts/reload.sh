@@ -1,7 +1,7 @@
 #!/bin/bash
 swaync-client -R
 swaync-client -rs
-killall waybar hyprpaper
+killall -9 waybar hyprpaper
 waybar
 sleep 1
 hyprpaper

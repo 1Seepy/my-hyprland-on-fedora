@@ -8,11 +8,13 @@ case "$choice" in
   * ) exit;;
 esac
 echo "Updating..."
-sudo dnf update -y
+sudo dnf update --refresh -y
 echo "Updated."
 echo "Installing packages..."
-sudo dnf copr enable solopasha/hyprland azandure/clipse -y
-sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip -y
+sudo dnf copr enable solopasha/hyprland -yq
+sudo dnf copr enable azandure/clipse -yq
+sudo dnf copr enable wezfurlong/wezterm-nightly -yq
+sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme -y
 pip install pyquery
 echo "Installed packages."
 echo "Cloning dotfiles..."
@@ -31,8 +33,10 @@ echo "Prettying up..."
 mkdir ~/Pictures/Hyprpapers ~/.local/share/fonts ~/.icons
 cd ~/Downloads/myfedorahyprland1324/extras
 mv -f wallpaper* ~/Pictures/Hyprpapers
-mv -f *.ttf ~/.local/share/fonts
-sudo mv -f * /usr/share/icons
+cd Fonts
+mv -f * ~/.local/share/fonts
+cd ..
+mv -f * ~/.local/share/icons
 flatpak override --user --filesystem=/usr/share/icons:ro
 echo "Cleaning up..."
 cd ~/Downloads
