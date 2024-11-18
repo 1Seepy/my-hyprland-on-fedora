@@ -12,11 +12,7 @@
 * {
   all: unset;
   font-size: 10px;
-<<<<<<< HEAD
   font-family: "Ubuntu Nerd Font";
-=======
-  font-family: "Fira Code Nerd Font";
->>>>>>> de52432e14b2e1446f8539f144d228fc2a54a96e
   transition: 200ms;
 }
 
