@@ -1,20 +1,20 @@
 #!/bin/bash
 clear
 echo "My Hyprland on Fedora will now install onto your system."
-read -p "Proceed (N/y)? " choice
+read -p "Proceed (y/N)? " choice
 case "$choice" in 
   y|Y ) echo "Continuing.";;
-  n|N ) exit;;
-  * ) exit;;
+  n|N ) return;;
+  * ) return;;
 esac
 echo "Updating..."
-sudo dnf update --refresh -y
+sudo dnf update --refresh -yq
 echo "Updated."
 echo "Installing packages..."
-sudo dnf copr enable solopasha/hyprland -yq
-sudo dnf copr enable azandure/clipse -yq
-sudo dnf copr enable wezfurlong/wezterm-nightly -yq
-sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme -y
+sudo dnf copr enable solopasha/hyprland > /dev/null 2>&1
+sudo dnf copr enable azandure/clipse > /dev/null 2>&1
+sudo dnf copr enable wezfurlong/wezterm-nightly > /dev/null 2>&1
+sudo dnf install fish wezterm hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme -yq
 pip install pyquery
 echo "Installed packages."
 echo "Cloning dotfiles..."
@@ -24,20 +24,19 @@ cd ~/.config
 mv * ~/.configtemp
 cd ~/Downloads/myfedorahyprland1324/dotfiles
 mv -f * ~/.config
-cd ~/.config/swaync
-cp style.css /etc/xdg/swaync
 echo "Restoring..."
 cd ~/.configtemp
-mv * ~/.config
+mv -n * ~/.config
 echo "Prettying up..."
-mkdir ~/Pictures/Hyprpapers ~/.local/share/fonts ~/.icons
+mkdir ~/Pictures/Hyprpapers ~/.local/share/fonts ~/.local/share/icons
 cd ~/Downloads/myfedorahyprland1324/extras
 mv -f wallpaper* ~/Pictures/Hyprpapers
 cd Fonts
 mv -f * ~/.local/share/fonts
 cd ..
+rm -rf Fonts
 mv -f * ~/.local/share/icons
-flatpak override --user --filesystem=/usr/share/icons:ro
+flatpak override --user --filesystem=~/.local/share/icons:ro
 echo "Cleaning up..."
 cd ~/Downloads
 rm -rf myfedorahyprland1324
@@ -49,4 +48,3 @@ case "$choice" in
   n|N ) systemctl reboot;;
   * ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
 esac
-exit
