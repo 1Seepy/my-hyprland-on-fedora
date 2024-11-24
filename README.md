@@ -2,7 +2,7 @@ Installation can be done manually or through the install script.
 
 ***WARNING!*** THE INSTALL SCRIPT WILL ERASE ANY CONFIGURATIONS YOU ALREADY HAVE. MAKE BACKUPS IF YOU WANT TO KEEP THEM.
 
-*Disclaimer:* This was designed for Fedora. The install script *will not* work on any distro that isn't very similar to fedora, and the dotfiles I cannot give any guarantees on.
+*Disclaimer:* This was designed for Fedora 41. The install script *will only* work on RPM-based distros, and the dotfiles I cannot give any guarantees for.
 
 ### Automatic install
 * Download the install script
@@ -13,12 +13,13 @@ Installation can be done manually or through the install script.
 ```
 sudo dnf copr enable solopasha/hyprland
 sudo dnf copr enable azandure/clipse
-sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip
+sudo dnf copr enable wezfurlong/wezterm-nightly
+sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent wezterm fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme
 pip install pyquery
 ```
 * Allow flatpaks to use system themes:
 ```
-flatpak override --user --filesystem=/usr/share/icons:ro
+flatpak override --user --filesystem=~/.local/share/icons:ro
 ```
 * Clone the repository
 * Move the dotfiles into ~/.config
