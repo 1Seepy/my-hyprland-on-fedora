@@ -2,7 +2,7 @@ Installation can be done manually or through the install script.
 
 ***WARNING!*** THE INSTALL SCRIPT WILL ERASE ANY CONFIGURATIONS YOU ALREADY HAVE. MAKE BACKUPS IF YOU WANT TO KEEP THEM.
 
-*Disclaimer:* This was designed for Fedora. The install script *will not* work on any distro that isn't very similar to fedora, and the dotfiles I cannot give any guarantees on.
+*Disclaimer:* This was designed for Fedora 41. The install script *will only* work on RPM-based distros, and the dotfiles I cannot give any guarantees for.
 
 ### Automatic install
 * Download the install script
