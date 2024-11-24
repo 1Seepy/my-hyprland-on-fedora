@@ -13,12 +13,13 @@ Installation can be done manually or through the install script.
 ```
 sudo dnf copr enable solopasha/hyprland
 sudo dnf copr enable azandure/clipse
-sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot kitty fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip
+sudo dnf copr enable wezfurlong/wezterm-nightly
+sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent wezterm fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme
 pip install pyquery
 ```
 * Allow flatpaks to use system themes:
 ```
-flatpak override --user --filesystem=/usr/share/icons:ro
+flatpak override --user --filesystem=~/.local/share/icons:ro
 ```
 * Clone the repository
 * Move the dotfiles into ~/.config
