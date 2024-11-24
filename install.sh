@@ -19,7 +19,7 @@ pip install pyquery
 echo "Installed packages."
 echo "Cloning dotfiles..."
 mkdir ~/Downloads/myfedorahyprland1324 ~/.configtemp
-git clone https://github.com/1Seepy/my-hyprland-on-fedora.git ~/Downloads/myfedorahyprland1324
+git clone https://github.com/1Seepy/my-hyprland-on-fedora.git -b kellen ~/Downloads/myfedorahyprland1324
 cd ~/.config
 mv * ~/.configtemp
 cd ~/Downloads/myfedorahyprland1324/dotfiles
