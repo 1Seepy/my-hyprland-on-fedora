@@ -1,25 +1,19 @@
 /*
 * Custom palette
-* Maintainer: atticusblu
+* Maintainer: atticusblue
 */
 
-@define-color base          rgb(36,  39,  49 ); /* #000000 */
-@define-color mantle        rgb(30,  32,  48 ); /* #000000 */
-@define-color crust         rgb(24,  25,  38 ); /* #000000 */
+@define-color base     #24273a;
+@define-color mantle   #1e2030;
+@define-color crust    #181926;
 
-@define-color mountaintop   rgb(1,   10,  90 ); /* #010a5a */
-@define-color mountainmid   rgb(19,  91,  155); /* #135b9b */
-@define-color mountainbase  rgb(0,   114, 140); /* #00728c */
-@define-color sky           rgb(17,  22,  75 ); /* #11164b */
-@define-color sun           rgb(209, 224, 218); /* #a9b8b2 */
-@define-color clouds        rgb(24,  30,  95 ); /* #181e5f */
-@define-color water         rgb(14,  75,  135); /* #0e4b87 */
-@define-color bushes        rgb(10,  66,  123); /* #0a427b */
-@define-color leaves        rgb(0,   36,  95 ); /* #00245f */
-
-@define-color hyprland      rgb(51,  204, 255); /* #33CCFF */
-@define-color sapphire      rgb(7,   44,  97 ); /* #072C61 */
-@define-color green         rgb(166, 218, 149); /* #A6DA95 */
-@define-color yellow        rgb(238, 212, 159); /* #000000 */
-@define-color red           rgb(237, 135, 150); /* #000000 */
-@define-color black         rgb(0,   5,   10 ); /* #00050a */
+@define-color mountain #1a2c74;
+@define-color sun      #eefbf1;
+@define-color water    #266ab5;
+@define-color hyprland #33ccff;
+@define-color sky      #2f9efa;
+@define-color sapphire #072c61;
+@define-color green    #a6da95;
+@define-color yellow   #eed49f;
+@define-color red      #ed8796;
+@define-color black    #000000;

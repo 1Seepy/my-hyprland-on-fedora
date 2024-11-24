@@ -1,6 +1,3 @@
-@import url("../rice/colors.css");
-@define-color border transparent;
-
 * {
     font-family: "Helvetica Neue";
 	background-image: none;
@@ -14,71 +11,62 @@ window {
 
 button {
 	color: transparent;
-    font-size: 0px;
+    font-size:20px;
 
     background-repeat: no-repeat;
 	background-position: center;
-	background-size: 35%;
-	background-color: rgba(0, 15, 30, 0.35); /* @black */
-	border: 3px solid transparent;
+	background-size: 25%;
+	background-color: transparent;
+	border: 3px solid rgba(1, 1, 1, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 button:active,
 button:hover {
-  color: transparent;
-  background-color: rgba(0, 15, 30, 0.75); /* @black */
-  border: 3px solid transparent;
+    color: transparent;
+  background-color: rgba(0, 0, 0, 0.75);
+	border: 3px solid #266ab5;
 }
+
 /* 
 ----------------------------------------------------- 
 Buttons
 ----------------------------------------------------- 
 */
 
-#lock,
-#reboot,
-#logout,
-#shutdown,
-#suspend,
-#hibernate {
-  margin: 0px;
-  border-radius: 0px;
-}
-
 #lock {
-	border-radius: 60px 0px 0px 0px;
-	border-top: 3px solid @border;
-	border-left: 3px solid @border;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/lock.png"));
 }
 
 #reboot {
-	border-radius: 0px 0px 0px 60px;
-	border-bottom: 3px solid @border;
-	border-left: 3px solid @border;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/reboot.png"));
 }
 
 #logout {
-	border-top: 3px solid @border;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/logout.png"));
 }
 
 #shutdown {
-	border-bottom: 3px solid @border;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/shutdown.png"));
 }
 
 #suspend {
-	border-radius: 0px 60px 0px 0px;
-	border-top: 3px solid @border;
-	border-right: 3px solid @border;
+  margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/suspend.png"));
 }
 
 #hibernate {
-	border-radius: 0px 0px 60px 0px;
-	border-right: 3px solid @border;
-	border-bottom: 3px solid @border;
+  margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/hibernate.png"));
 }

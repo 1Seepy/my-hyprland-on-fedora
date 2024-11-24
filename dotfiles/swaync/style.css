@@ -1,10 +1,10 @@
 /* Import colors from universal colorsheet */
 @import url("../rice/colors.css");
 
-@define-color bgcolor @black;
-@define-color bgcolor2 rgb(0, 25, 50);
-@define-color textcolor @sun;
-@define-color bordercolor @clouds;
+@define-color bgcolor     @water;
+@define-color bgcolor2    @water;
+@define-color textcolor   @black;
+@define-color bordercolor @water;
 
 /********************
  ** Global Styles **

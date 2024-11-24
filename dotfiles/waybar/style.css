@@ -1,68 +1,65 @@
-@import url("../rice/colors.css");
+@import "colors.css";
 
 * {
-  font-family: Ubuntu Nerd Font;
-  font-size: 18px;
+  font-family: FantasqueSansMono Nerd Font;
+  font-size: 17px;
   min-height: 0;
 }
 
 #waybar {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.75);
+  border-color: @water;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  color: @water;
+  margin: 5px 5px;
 }
 
 #workspaces {
-  border-radius: 1.875rem;
+  border-radius: 1rem;
   margin: 5px;
   background-color: transparent;
-  margin-left: 15px;
+  margin-left: 1rem;
 }
 
 #workspaces button {
-  color: @clouds;
+  color: @mountain;
+  border-radius: 1rem;
   padding: 0.4rem;
-  border-radius: 1.875rem;
 }
 
 #workspaces button.active {
-  color: @sun;
+  color: @water;
+  background-color: transparent;
+  border-radius: 1rem;
 }
 
 #workspaces button:hover {
   color: @sky;
   background-color: transparent;
-  border-radius: 1.875rem;
+  border-radius: 1rem;
 }
 
 #custom-music,
-#window,
 #tray,
-#pulseaudio,
 #backlight,
-#network,
 #clock,
 #battery,
 #pulseaudio,
 #custom-lock,
 #custom-power,
 #custom-updates,
-#custom-fedora,
-#custom-weather,
-#custom-apps,
-#custom-notification {
-  color: @sun;
-  background-color: @black;
-  border: 3px solid @clouds;
-  border-radius: 1.875rem;
-  padding: 0.5rem 1rem;
-  margin: 5px 5px;
-}
-
 #custom-fedora {
-  margin-left: 20px;
+  color: @water;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
 }
 
-#custom-power {
-  margin-right: 20px;
+#clock {
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 
 #battery {
@@ -75,4 +72,67 @@
 
 #battery.warning:not(.charging) {
   color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+#pulseaudio {
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  border-radius: 1rem;
+}
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+}
+
+#custom-power,
+#custom-fedora {
+    color: @black;
+    background-color: @water;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+
+/* Weather */
+#custom-weather.severe {
+    color: #eb937d;
+}
+
+#custom-weather.sunnyDay {
+    color: #c2ca76;
+}
+
+#custom-weather.clearNight {
+    color: #2b2b2a;
+}
+
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+    color: #c2ddda;
+}
+
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+    color: #5aaca5;
+}
+
+#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
+    color: #d6e7e5;
+}
+
+#custom-weather.default {
+    color: #dbd9d8;
 }
