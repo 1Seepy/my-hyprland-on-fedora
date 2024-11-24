@@ -31,7 +31,7 @@ function gimme
 
     # Is there an RPM package
     if dnf info $argv > /dev/null 2>&1
-        if dnf list installed $argv > /dev/null 2>&1
+        if dnf list --installed $argv > /dev/null 2>&1
             echo "RPM '$argv' is already installed."
             return
         end

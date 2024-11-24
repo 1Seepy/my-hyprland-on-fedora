@@ -18,10 +18,10 @@ weather_icons = {
     "default": "",
 }
 
-location_id = "13066"
+location_id = "13078"
 
 # get html page
-url = "https://weather.com/en-IN/weather/today/l/" + location_id
+url = "https://weather.com/en-US/weather/today/l/" + location_id
 html_data = PyQuery(url=url)
 
 # current temperature
