@@ -12,14 +12,8 @@ function gimme
 
     # Did the user ask for help
     if test "$argv" = "--help"
-	echo "gimme <arg>	# If '<arg>' = 'updates', update dnf and flatpaks, otherwise attempt to install package '<arg>' first through dnf then through Flatpak."
+	echo "gimme <arg>	# If '<arg>' = 'updates', update dnf and Flatpaks, otherwise attempt to install package '<arg>' first through dnf then through Flatpak."
 	return
-    end
-
-    # Did the user use flags
-    if test -z (echo $argv | awk -F'-' '{print $1}')
-	echo "Gimme does not currently support flags other than '--help'."
-    	return 1
     end
 
     # Did the user request updates
@@ -31,12 +25,12 @@ function gimme
 
     # Is there an RPM package
     if dnf info $argv > /dev/null 2>&1
-        if dnf list installed $argv > /dev/null 2>&1
+        if dnf list --installed $argv > /dev/null 2>&1
             echo "RPM '$argv' is already installed."
             return
         end
         echo "RPM found, installing…"
-        sudo dnf install $argv -yq
+        sudo dnf install $argv -q
         return
     end
 
@@ -58,6 +52,6 @@ function gimme
     end
     set flatref (echo $flat_refid | cut -d ' ' -f 2)
     echo "Flatpak found, installing…"
-    flatpak install $flatref $flatid -y
+    flatpak install $flatref $flatid
 end
 

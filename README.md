@@ -14,7 +14,7 @@ Installation can be done manually or through the install script.
 sudo dnf copr enable solopasha/hyprland
 sudo dnf copr enable azandure/clipse
 sudo dnf copr enable wezfurlong/wezterm-nightly
-sudo dnf install fish hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent wezterm fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme
+sudo dnf install fish qt6ct qt6-qtwayland hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent wezterm fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme
 pip install pyquery
 ```
 * Allow flatpaks to use system themes:
@@ -26,7 +26,7 @@ flatpak override --user --filesystem=~/.local/share/icons:ro
 
 (If a directory below doesn't exist, create it.)
 * Move any wallpapers into ```~/Pictures/Hyprpapers```
-* Move the cursor to ```/usr/share/icons```
+* Move the cursor to ```~/.local/share/icons```
 * Move the fonts to ```~/.local/share/fonts```
 
 ##### If you have any issues, idk.
