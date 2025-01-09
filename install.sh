@@ -11,9 +11,9 @@ echo "Updating..."
 sudo dnf update --refresh -yq
 echo "Updated."
 echo "Installing packages..."
-sudo dnf copr enable solopasha/hyprland > /dev/null 2>&1
-sudo dnf copr enable azandure/clipse > /dev/null 2>&1
-sudo dnf copr enable wezfurlong/wezterm-nightly > /dev/null 2>&1
+sudo dnf copr enable solopasha/hyprland -yq
+sudo dnf copr enable azandure/clipse -yq
+sudo dnf copr enable wezfurlong/wezterm-nightly -yq
 sudo dnf install fish wezterm hyprland hyprpaper hyprlock hypridle hyprshot hyprpolkitagent fastfetch rofi-wayland swaync waybar wlogout wl-clipboard clipse btop python3-pip candy-icon-theme -yq
 pip install pyquery
 echo "Installed packages."
@@ -38,13 +38,12 @@ rm -rf Fonts
 mv -f * ~/.local/share/icons
 flatpak override --user --filesystem=~/.local/share/icons:ro
 echo "Cleaning up..."
-cd ~/Downloads
-rm -rf myfedorahyprland1324
+rm -rf ~/Downloads/myfedorahyprland1324
 rm -rf ~/.configtemp
 echo "Done!"
-read -p "To enter Hyprland you must reboot. Reboot later? [Y/n] " choice
+read -p "To enter Hyprland you must reboot. Reboot now? [y/N] " choice
 case "$choice" in 
-  y|Y ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
-  n|N ) systemctl reboot;;
+  n|N ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
+  y|Y ) systemctl reboot;;
   * ) echo "When you are logging back in, select Hyprland for your desktop session to enter hyprland.";;
 esac
